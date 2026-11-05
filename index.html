@@ -5,13 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Etsy Research Tool</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 640px; margin: 60px auto; padding: 0 20px; color: #222; line-height: 1.6; }
-    h1 { font-size: 1.6rem; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f6f8f9;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #4F8F8B, #2f5f6b);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px 70px;
+    }
+    header h1 { font-size: 2.2rem; margin-bottom: 12px; }
+    header p { max-width: 560px; margin: 0 auto; opacity: 0.92; font-size: 1.05rem; }
+    .badge {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 6px 16px;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+    }
+    main { max-width: 860px; margin: -40px auto 60px; padding: 0 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 26px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    }
+    .card h2 { font-size: 1.1rem; margin-bottom: 8px; color: #2f5f6b; }
+    .card p { font-size: 0.95rem; color: #52606d; }
+    .note {
+      margin-top: 28px;
+      background: #fff;
+      border-left: 5px solid #4F8F8B;
+      border-radius: 10px;
+      padding: 20px 24px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      font-size: 0.95rem;
+      color: #52606d;
+    }
+    footer { text-align: center; padding: 30px 20px 50px; font-size: 0.85rem; color: #7b8794; }
   </style>
 </head>
 <body>
-  <h1>Etsy Research Tool</h1>
-  <p>A private, personal tool for analyzing public Etsy listing data (titles, tags, prices, favorites) to improve SEO for my own Etsy shop.</p>
-  <p>It is used only by its owner. It does not modify listings, send messages, or access other users' private data, and it is not offered to the public.</p>
+  <header>
+    <h1>Etsy Research Tool</h1>
+    <p>A small personal tool for studying public Etsy listing data to improve SEO on my own shop.</p>
+    <span class="badge">PERSONAL USE ONLY</span>
+  </header>
+
+  <main>
+    <div class="grid">
+      <div class="card">
+        <h2>Reads public data</h2>
+        <p>Looks at publicly visible listing information such as titles, tags, prices, and favorites counts.</p>
+      </div>
+      <div class="card">
+        <h2>Finds patterns</h2>
+        <p>Compares what successful listings in a niche have in common, to guide my own titles and tags.</p>
+      </div>
+      <div class="card">
+        <h2>Read-only</h2>
+        <p>Does not create or edit listings, send messages, or access anyone's private data.</p>
+      </div>
+    </div>
+
+    <div class="note">
+      This tool is used only by its owner and is not offered to the public or sold to anyone.
+    </div>
+  </main>
+
+  <footer>Built for personal research &middot; Not affiliated with Etsy</footer>
 </body>
 </html>
